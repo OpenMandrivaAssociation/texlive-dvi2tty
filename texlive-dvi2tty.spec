@@ -1,3 +1,9 @@
+# revision 23089
+# category TLCore
+# catalog-ctan /dviware/dvi2tty
+# catalog-date 2009-11-09 17:50:29 +0100
+# catalog-license gpl
+# catalog-version 3.5.1
 Name:		texlive-dvi2tty
 Version:	3.5.1
 Release:	1
@@ -41,6 +47,7 @@ present author translated the program to C.
 %{_texmfdir}/doc/man/man1/dvi2tty.man1.pdf
 %doc %{_mandir}/man1/disdvi.1*
 %doc %{_texmfdir}/doc/man/man1/disdvi.man1.pdf
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -53,3 +60,5 @@ mkdir -p %{buildroot}%{_datadir}
 cp -fpar texmf %{buildroot}%{_datadir}
 mkdir -p %{buildroot}%{_mandir}/man1
 mv %{buildroot}%{_texmfdir}/doc/man/man1/*.1 %{buildroot}%{_mandir}/man1
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
