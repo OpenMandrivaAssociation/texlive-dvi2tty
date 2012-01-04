@@ -6,7 +6,7 @@
 # catalog-version 3.5.1
 Name:		texlive-dvi2tty
 Version:	3.5.1
-Release:	1
+Release:	2
 Summary:	Produce ASCII from DVI
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/dviware/dvi2tty
