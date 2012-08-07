@@ -1,12 +1,12 @@
-# revision 23089
+# revision 26689
 # category TLCore
 # catalog-ctan /dviware/dvi2tty
-# catalog-date 2009-11-09 17:50:29 +0100
+# catalog-date 2012-04-09 22:37:34 +0200
 # catalog-license gpl
 # catalog-version 3.5.1
 Name:		texlive-dvi2tty
 Version:	3.5.1
-Release:	2
+Release:	3
 Summary:	Produce ASCII from DVI
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/dviware/dvi2tty
