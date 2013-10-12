@@ -1,4 +1,4 @@
-# revision 26689
+# revision 29764
 # category TLCore
 # catalog-ctan /dviware/dvi2tty
 # catalog-date 2012-04-09 22:37:34 +0200
@@ -6,7 +6,7 @@
 # catalog-version 3.5.1
 Name:		texlive-dvi2tty
 Version:	3.5.1
-Release:	3
+Release:	4
 Summary:	Produce ASCII from DVI
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/dviware/dvi2tty
@@ -35,9 +35,9 @@ present author translated the program to C.
 #-----------------------------------------------------------------------
 %files
 %{_mandir}/man1/dvi2tty.1*
-%{_texmfdir}/doc/man/man1/dvi2tty.man1.pdf
+%{_texmfdistdir}/doc/man/man1/dvi2tty.man1.pdf
 %doc %{_mandir}/man1/disdvi.1*
-%doc %{_texmfdir}/doc/man/man1/disdvi.man1.pdf
+%doc %{_texmfdistdir}/doc/man/man1/disdvi.man1.pdf
 
 #-----------------------------------------------------------------------
 %prep
@@ -47,24 +47,6 @@ present author translated the program to C.
 
 %install
 mkdir -p %{buildroot}%{_datadir}
-cp -fpar texmf %{buildroot}%{_datadir}
+cp -fpar texmf-dist %{buildroot}%{_datadir}
 mkdir -p %{buildroot}%{_mandir}/man1
-mv %{buildroot}%{_texmfdir}/doc/man/man1/*.1 %{buildroot}%{_mandir}/man1
-
-
-%changelog
-* Tue Aug 07 2012 Paulo Andrade <pcpa@mandriva.com.br> 3.5.1-3
-+ Revision: 812228
-- Update to latest release.
-
-* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 3.5.1-2
-+ Revision: 751176
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 3.5.1-1
-+ Revision: 718275
-- texlive-dvi2tty
-- texlive-dvi2tty
-- texlive-dvi2tty
-- texlive-dvi2tty
-
+mv %{buildroot}%{_texmfdistdir}/doc/man/man1/*.1 %{buildroot}%{_mandir}/man1
