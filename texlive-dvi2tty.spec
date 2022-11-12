@@ -1,18 +1,12 @@
-# revision 33818
-# category TLCore
-# catalog-ctan /dviware/dvi2tty
-# catalog-date 2012-04-09 22:37:34 +0200
-# catalog-license gpl
-# catalog-version 3.5.1
 Name:		texlive-dvi2tty
-Version:	6.0.0
-Release:	2
+Version:	62387
+Release:	1
 Summary:	Produce ASCII from DVI
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/dviware/dvi2tty
 License:	GPL
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/dvi2tty.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/dvi2tty.doc.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/dvi2tty.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/dvi2tty.doc.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -32,7 +26,7 @@ present author translated the program to C.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1
+%autosetup -p1 -c -a1
 
 %build
 
