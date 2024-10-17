@@ -3,7 +3,7 @@ Version:	66186
 Release:	1
 Summary:	Produce ASCII from DVI
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/dviware/dvi2tty
+URL:		https://www.ctan.org/tex-archive/dviware/dvi2tty
 License:	GPL
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/dvi2tty.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/dvi2tty.doc.r%{version}.tar.xz
