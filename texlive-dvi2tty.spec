@@ -1,37 +1,25 @@
-Name:		texlive-dvi2tty
-Version:	66186
-Release:	1
+%global tl_name dvi2tty
+%global tl_revision 66186
+
+Name:		texlive-%{tl_name}
+Epoch:		1
+Version:	6.0.0
+Release:	%{tl_revision}.1
 Summary:	Produce ASCII from DVI
 Group:		Publishing
 URL:		https://www.ctan.org/tex-archive/dviware/dvi2tty
-License:	GPL
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/dvi2tty.r%{version}.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/dvi2tty.doc.r%{version}.tar.xz
+License:	gpl2
+Source0:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/dvi2tty.r%{tl_revision}.tar.xz
+Source1:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/dvi2tty.doc.r%{tl_revision}.tar.xz
 BuildArch:	noarch
+BuildSystem:	texlive
 BuildRequires:	texlive-tlpkg
-Requires(pre):	texlive-tlpkg
-Requires:	texlive-dvi2tty.bin
+%texlive_base_requires
+Requires:	texlive(dvi2tty.bin)
+Provides:	texlive(%{tl_name}) = %{tl_revision}
 
 %description
-A DVI driver to produce an ASCII representation of the
-document. The original version was written in Pascal, and the
-present author translated the program to C.
+A DVI driver to produce an ASCII representation of the document. The
+original version was written in Pascal, and the present author
+translated the program to C.
 
-#-----------------------------------------------------------------------
-%files
-%doc %{_mandir}/man1/disdvi.1*
-%doc %{_texmfdistdir}/doc/man/man1/disdvi.man1.pdf
-%doc %{_mandir}/man1/dvi2tty.1*
-%doc %{_texmfdistdir}/doc/man/man1/dvi2tty.man1.pdf
-
-#-----------------------------------------------------------------------
-%prep
-%autosetup -p1 -c -a1
-
-%build
-
-%install
-mkdir -p %{buildroot}%{_datadir}
-cp -fpar texmf-dist %{buildroot}%{_datadir}
-mkdir -p %{buildroot}%{_mandir}/man1
-mv %{buildroot}%{_texmfdistdir}/doc/man/man1/*.1 %{buildroot}%{_mandir}/man1
