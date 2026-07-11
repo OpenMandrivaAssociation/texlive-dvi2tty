@@ -13,8 +13,6 @@ Source0:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/dvi2tty.r%{tl_re
 Source1:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/dvi2tty.doc.r%{tl_revision}.tar.xz
 BuildArch:	noarch
 BuildSystem:	texlive
-BuildRequires:	texlive-tlpkg
-%texlive_base_requires
 Requires:	texlive(dvi2tty.bin)
 Provides:	texlive(%{tl_name}) = %{tl_revision}
 
